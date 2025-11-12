@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    background: #0077b6;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+.intro {
+    background: #90e0ef;
+    text-align: center;
+    padding: 60px 10px;
+}
+
+.intro h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+article {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+article img,
+article video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+article h3 {
+    color: #0077b6;
+    margin-top: 5px;
+}
+
+.meta {
+    font-size: 13px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.subscribe {
+    background: #caf0f8;
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.subscribe input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.subscribe button {
+    padding: 10px 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 35px;
+}
+
+@media (max-width: 1024px) {
+    .articles-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    article {
+        padding: 12px;
+    }
+    .intro {
+        padding: 50px 10px;
+    }
+    .intro h2 {
+        font-size: 26px;
+    }
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .subscribe input,
+    .subscribe button {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+    article {
+        padding: 10px;
+    }
+    .intro {
+        padding: 40px 10px;
+    }
+    .intro h2 {
+        font-size: 22px;
+    }
+    article h3 {
+        font-size: 18px;
+    }
+    .meta {
+        font-size: 12px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .subscribe input,
+    .subscribe button {
+        width: 100%;
+    }
+}
